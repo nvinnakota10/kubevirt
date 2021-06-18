@@ -153,6 +153,7 @@ func createDomainInterfaces(vmi *v1.VirtualMachineInstance, domain *api.Domain, 
 			}
 			var vhostuserQueueSize uint32 = 1024
 			domainIface.Driver = &api.InterfaceDriver{
+				Name:        "vhost",
 				RxQueueSize: &vhostuserQueueSize,
 				TxQueueSize: &vhostuserQueueSize,
 			}
